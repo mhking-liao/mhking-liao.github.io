@@ -1,3 +1,19 @@
+---
+title: "Hugo安装"
+date: 2021-11-24T00:00:53+08:00
+draft: true
+- 广西贵港
+- 家中
+tags:
+- ubuntu
+- Hugo
+- install
+- blog
+keywords:
+- tech
+#thumbnailImage: //example.com/image.jpg
+---
+
 # hugo安装
 
 
@@ -261,6 +277,11 @@ disqusShortname = "hugo-tranquilpeak-theme"
 git status
 git add .
 git commit -m "update toml"
+git push
+
+git status
+git add .
+git commit -m "hugo install to github"
 git push
 
 ```
