@@ -133,6 +133,69 @@
 </div>
 </div>
 </article>
+<article class="postShorten postShorten--thumbnailimg-bottom">
+<div class=postShorten-wrap>
+<div class=postShorten-header>
+<h1 class=postShorten-title>
+<a class=link-unstyled href=https://mhking-liao.github.io/post/git%E4%B8%8A%E4%BC%A0%E8%A6%86%E7%9B%96%E5%88%A0%E9%99%A4/ aria-label="打开帖子: ">
+</a>
+</h1>
+<div class="postShorten-meta post-meta">
+<time datetime=0001-01-01T00:00:00Z>
+一月 1, 1
+</time>
+</div>
+</div>
+<div class=postShorten-excerpt>
+Git上传、覆盖、删除 然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。
+git init 成功后，复制仓库的ssh地址，并输入以下指令：
+git remote add origin 仓库ssh地址 也可以用以下指令删除关联：
+git remote rm origin 也可以通过以下指令更换仓库：
+git remote set-url origin 仓库ssh地址 更换后，可以用查询查看是否更换成功。
+添加上传 将全部内容添加，先输入以下指令：
+git add . 如果是指定目录，就改为以下指令：
+git add 目录 如果是指定文件，就改为以下指令：
+git add 文件.后缀 之后，再输入以下指令：
+git commit -m "把文件提交，这里是注释" 到这里，你的添加并没有上传到仓库，只是添加到了暂存区，上传到仓库还需要输入以下指令：
+git push -u origin main 最后，还会有个提示，输入 yes 即可。
+删除 通过以下指令删除指定文件：
+git em 文件.后缀 通过以下指令可以删除指定文件夹：
+git em -r 文件夹 最后，必要通过以下指令提交修改：
+git commit -m "注释" 查询 查看本地分支：
+git branch 查看关联仓库地址：
+git remote -v 待补充。
+<p>
+<a href=https://mhking-liao.github.io/post/git%E4%B8%8A%E4%BC%A0%E8%A6%86%E7%9B%96%E5%88%A0%E9%99%A4/ class="postShorten-excerpt_link link" aria-label="打开帖子: ">阅读全文</a>
+</p>
+</div>
+</div>
+</article>
+<article class="postShorten postShorten--thumbnailimg-bottom">
+<div class=postShorten-wrap>
+<div class=postShorten-header>
+<h1 class=postShorten-title>
+<a class=link-unstyled href=https://mhking-liao.github.io/post/hugo%E5%AE%89%E8%A3%85/ aria-label="打开帖子: ">
+</a>
+</h1>
+<div class="postShorten-meta post-meta">
+<time datetime=0001-01-01T00:00:00Z>
+一月 1, 1
+</time>
+</div>
+</div>
+<div class=postShorten-excerpt>
+hugo安装 一、安装Git sudo apt install git 配置ssh
+二、安装go mkdir ~/home_opt #home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install #重命名 sudo mv -f go_install /usr/local #移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
+GOROOT是系统上安装Go软件包的位置
+GOPATH是工作目录的位置
+# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin #go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
+sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc #环境变量生效 export #输出 默认shell的修改使用下面的：
+<p>
+<a href=https://mhking-liao.github.io/post/hugo%E5%AE%89%E8%A3%85/ class="postShorten-excerpt_link link" aria-label="打开帖子: ">阅读全文</a>
+</p>
+</div>
+</div>
+</article>
 </section>
 <footer id=footer class=main-content-wrap>
 <span class=copyrights>
