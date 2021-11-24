@@ -1,0 +1,365 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"Website","@id":"https:\/\/mhking-liao.github.io\/","author":{"@type":"Person","name":"MHKING","image":"https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460"},"name":"MHKING BLOG","description":"go语言编译安装Hugo 二、安装go mkdir ~\/home_opt\t#home下软件安装包位置的home_opt，可设置自己的位置 cd ~\/home_opt wget -c https:\/\/go.dev\/dl\/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install\t#重命名 sudo mv -f go_install \/usr\/local\t#移动到安装区 cd \/usr\/local sudo chmod -R 0777 go_install 添加到$PATH环境变量\nGOROOT是系统上安装Go软件包的位置\nGOPATH是工作目录的位置\n# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~\/home_opt\/go_work ~\/home_opt\/go_work\/src ~\/home_opt\/go_work\/bin\t#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。\nsudo gedit ~\/.zshrc #内容： export GOROOT=\/usr\/local\/go_install export GOPATH=~\/home_opt\/go_work export PATH=$GOPATH\/bin:$GOROOT\/bin:$PATH source ~\/.zshrc\t#环境变量生效 export\t#输出 默认shell的修改使用下面的：\necho $shell\t#查看默认shell sudo gedit ~\/.bashrc source ~\/.","url":"https:\/\/mhking-liao.github.io\/post\/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo\/","keywords":"[]"}</script>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name=author content="MHKING">
+<meta name=keywords content>
+<meta name=description content="go语言编译安装Hugo 二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
+GOROOT是系统上安装Go软件包的位置
+GOPATH是工作目录的位置
+# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
+sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：
+echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
+<meta property="og:description" content="go语言编译安装Hugo 二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
+GOROOT是系统上安装Go软件包的位置
+GOPATH是工作目录的位置
+# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
+sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：
+echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MHKING BLOG">
+<meta name=twitter:title content="MHKING BLOG">
+<meta property="og:url" content="https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/">
+<meta property="twitter:url" content="https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/">
+<meta property="og:site_name" content="MHKING BLOG">
+<meta property="og:description" content="go语言编译安装Hugo 二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
+GOROOT是系统上安装Go软件包的位置
+GOPATH是工作目录的位置
+# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
+sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：
+echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
+<meta name=twitter:description content="go语言编译安装Hugo 二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
+GOROOT是系统上安装Go软件包的位置
+GOPATH是工作目录的位置
+# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
+sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：
+echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
+<meta property="og:locale" content="zh-cn">
+<meta name=twitter:card content="summary">
+<meta property="og:image" content="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=640">
+<meta property="twitter:image" content="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=640">
+<title>MHKING BLOG</title>
+<link rel=icon href=https://mhking-liao.github.io/favicon.png>
+<link rel=canonical href=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://mhking-liao.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css>
+</head>
+<body>
+<div id=blog>
+<header id=header data-behavior=4>
+<i id=btn-open-sidebar class="fa fa-lg fa-bars"></i>
+<div class=header-title>
+<a class=header-title-link href=https://mhking-liao.github.io/ aria-label=去首页>MHKING BLOG</a>
+</div>
+<a class=header-right-picture href=https://mhking-liao.github.io/#about aria-label="打开链接: /#about">
+<img class=header-picture src="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=90" alt=作者的图片>
+</a>
+</header>
+<nav id=sidebar data-behavior=4>
+<div class=sidebar-container>
+<div class=sidebar-profile>
+<a href=https://mhking-liao.github.io/#about aria-label=阅读有关作者的更多信息>
+<img class=sidebar-profile-picture src="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=110" alt=作者的图片>
+</a>
+<h4 class=sidebar-profile-name>MHKING</h4>
+<h5 class=sidebar-profile-bio>生命不在于长短，而在于活得有意义！</h5>
+</div>
+<ul class=sidebar-buttons>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://mhking-liao.github.io/ title=Home>
+<i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden=true></i>
+<span class=sidebar-button-desc>首页</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://mhking-liao.github.io/categories title=Categories>
+<i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden=true></i>
+<span class=sidebar-button-desc>分类</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://mhking-liao.github.io/tags title=Tags>
+<i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden=true></i>
+<span class=sidebar-button-desc>标签</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://mhking-liao.github.io/archives title=Archives>
+<i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden=true></i>
+<span class=sidebar-button-desc>归档</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://mhking-liao.github.io/#about title=About>
+<i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden=true></i>
+<span class=sidebar-button-desc>关于</span>
+</a>
+</li>
+</ul>
+<ul class=sidebar-buttons>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://github.com/mhking-liao target=_blank rel=noopener title=GitHub>
+<i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden=true></i>
+<span class=sidebar-button-desc>GitHub</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://stackoverflow.com/users/636472/kakawait target=_blank rel=noopener title="Stack Overflow">
+<i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden=true></i>
+<span class=sidebar-button-desc>Stack Overflow</span>
+</a>
+</li>
+</ul>
+<ul class=sidebar-buttons>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://mhking-liao.github.io/index.xml title=RSS>
+<i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden=true></i>
+<span class=sidebar-button-desc>RSS</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<div id=main data-behavior=4 class=hasCoverMetaIn>
+<article class=post id=top>
+<div class="post-header main-content-wrap text-left">
+<h1 class=post-title>
+</h1>
+<div class="postShorten-meta post-meta">
+<time datetime=0001-01-01T00:00:00Z>
+一月 1, 1
+</time>
+</div>
+</div>
+<div class="post-content markdown">
+<div class=main-content-wrap>
+<h1 id=go语言编译安装hugo>go语言编译安装Hugo</h1>
+<h2 id=二安装go>二、安装go</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>mkdir ~/home_opt		<span style=color:#75715e>#home下软件安装包位置的home_opt，可设置自己的位置</span>
+cd ~/home_opt
+wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz
+sudo tar -xz go1.17.3.linux-amd64.tar.gz
+mv -f go go_install						<span style=color:#75715e>#重命名</span>
+sudo mv -f  go_install /usr/local		<span style=color:#75715e>#移动到安装区</span>
+cd /usr/local
+sudo chmod -R <span style=color:#ae81ff>0777</span> go_install
+</code></pre></div><p>添加到<code>$PATH</code>环境变量</p>
+<p><code>GOROOT</code>是系统上安装Go软件包的位置</p>
+<p><code>GOPATH</code>是工作目录的位置</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># src：go在包安装、文件编译时自动寻找区，bin：go执行命令区</span>
+mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	<span style=color:#75715e>#go工作区</span>
+sudo chmod -R <span style=color:#ae81ff>0777</span> go_work
+</code></pre></div><p>修改环境变量，我的shell改为zsh了。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo gedit ~/.zshrc
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#内容：</span>
+export GOROOT<span style=color:#f92672>=</span>/usr/local/go_install
+export GOPATH<span style=color:#f92672>=</span>~/home_opt/go_work
+export PATH<span style=color:#f92672>=</span>$GOPATH/bin:$GOROOT/bin:$PATH
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>source ~/.zshrc		<span style=color:#75715e>#环境变量生效</span>
+export				<span style=color:#75715e>#输出</span>
+</code></pre></div><p>默认shell的修改使用下面的：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>echo $shell			<span style=color:#75715e>#查看默认shell</span>
+sudo gedit ~/.bashrc
+source ~/.bashrc	<span style=color:#75715e>#环境变量生效</span>
+export				<span style=color:#75715e>#输出</span>
+</code></pre></div><p>效果：关闭shell，重启终端输入（任意shell能输出版本）</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>go version
+</code></pre></div><p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123173529-319x63.png alt=截屏-20211123173529-319x63></p>
+<h2 id=二编译hugo>二、编译hugo</h2>
+<p><a href=https://github.com/gohugoio/hugo>官网安装</a>（Mac，windows，linux如下）</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>mkdir ~/home_opt/src
+cd ~/home_opt/src
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#错误：</span>
+go: github.com/bep/debounce@v1.2.0: Get <span style=color:#e6db74>&#34;https://proxy.golang.org/github.com/bep/debounce/@v/v1.2.0.mod&#34;</span>: EOF
+
+</code></pre></div><p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123180633-803x36.png alt=截屏-20211123180633-803x36></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#国内ping不通proxy.golang.org</span>
+<span style=color:#75715e>#输入以下即可：</span>
+go env -w GOPROXY<span style=color:#f92672>=</span>https://goproxy.cn
+</code></pre></div><p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123180648-473x62.png alt=截屏-20211123180648-473x62></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>hugo version
+</code></pre></div><h3 id=heading></h3>
+</div>
+</div>
+<div id=post-footer class="post-footer main-content-wrap">
+<div class=post-actions-wrap>
+<nav>
+<ul class="post-actions post-action-nav">
+<li class=post-action>
+<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/git%E4%B8%8A%E4%BC%A0%E8%A6%86%E7%9B%96%E5%88%A0%E9%99%A4/ data-tooltip aria-label="下一篇: ">
+<i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/hugo%E5%AE%89%E8%A3%85/ data-tooltip aria-label="上一篇: ">
+<span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+<i class="fa fa-angle-right"></i>
+</a>
+</li>
+</ul>
+</nav>
+<ul class="post-actions post-action-share">
+<li class="post-action hide-lg hide-md hide-sm">
+<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label=分享这个帖子>
+<i class="fa fa-share-alt" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://www.facebook.com/sharer/sharer.php?u=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/" title="分享到 Facebook" aria-label="分享到 Facebook">
+<i class="fab fa-facebook-square" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/" title="分享到 Twitter" aria-label="分享到 Twitter">
+<i class="fab fa-twitter" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+<i class="fab fa-linkedin" aria-hidden=true></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#disqus_thread aria-label=发表评论>
+<i class="far fa-comment"></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#top aria-label=回到顶部>
+<i class="fa fa-arrow-up" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+<div id=disqus_thread>
+<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</div>
+<script type=text/javascript>var disqus_config=function(){this.page.url='https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/',this.page.identifier='/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/'};(function(){var a,b;if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}a=document.createElement('script'),a.type='text/javascript',a.async=!0,b='hugo-tranquilpeak-theme',a.src='//'+b+'.disqus.com/embed.js',(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(a)})()</script>
+</div>
+</article>
+<footer id=footer class=main-content-wrap>
+<span class=copyrights>
+&copy; 2021 MHKING. All Rights Reserved
+</span>
+</footer>
+</div>
+<div id=bottom-bar class=post-bottom-bar data-behavior=4>
+<div class=post-actions-wrap>
+<nav>
+<ul class="post-actions post-action-nav">
+<li class=post-action>
+<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/git%E4%B8%8A%E4%BC%A0%E8%A6%86%E7%9B%96%E5%88%A0%E9%99%A4/ data-tooltip aria-label="下一篇: ">
+<i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/hugo%E5%AE%89%E8%A3%85/ data-tooltip aria-label="上一篇: ">
+<span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+<i class="fa fa-angle-right"></i>
+</a>
+</li>
+</ul>
+</nav>
+<ul class="post-actions post-action-share">
+<li class="post-action hide-lg hide-md hide-sm">
+<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label=分享这个帖子>
+<i class="fa fa-share-alt" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://www.facebook.com/sharer/sharer.php?u=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/" title="分享到 Facebook" aria-label="分享到 Facebook">
+<i class="fab fa-facebook-square" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/" title="分享到 Twitter" aria-label="分享到 Twitter">
+<i class="fab fa-twitter" aria-hidden=true></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+<i class="fab fa-linkedin" aria-hidden=true></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#disqus_thread aria-label=发表评论>
+<i class="far fa-comment"></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#top aria-label=回到顶部>
+<i class="fa fa-arrow-up" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div id=share-options-bar class=share-options-bar data-behavior=4>
+<i id=btn-close-shareoptions class="fa fa-times"></i>
+<ul class=share-options>
+<li class=share-option>
+<a class=share-option-btn target=new href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmhking-liao.github.io%2Fpost%2Fgo%25E8%25AF%25AD%25E8%25A8%2580%25E7%25BC%2596%25E8%25AF%2591%25E5%25AE%2589%25E8%25A3%2585hugo%2F" aria-label="分享到 Facebook">
+<i class="fab fa-facebook-square" aria-hidden=true></i><span>分享到 Facebook</span>
+</a>
+</li>
+<li class=share-option>
+<a class=share-option-btn target=new href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fmhking-liao.github.io%2Fpost%2Fgo%25E8%25AF%25AD%25E8%25A8%2580%25E7%25BC%2596%25E8%25AF%2591%25E5%25AE%2589%25E8%25A3%2585hugo%2F" aria-label="分享到 Twitter">
+<i class="fab fa-twitter" aria-hidden=true></i><span>分享到 Twitter</span>
+</a>
+</li>
+<li class=share-option>
+<a class=share-option-btn target=new href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmhking-liao.github.io%2Fpost%2Fgo%25E8%25AF%25AD%25E8%25A8%2580%25E7%25BC%2596%25E8%25AF%2591%25E5%25AE%2589%25E8%25A3%2585hugo%2F" aria-label="分享到 Linkedin">
+<i class="fab fa-linkedin" aria-hidden=true></i><span>分享到 Linkedin</span>
+</a>
+</li>
+</ul>
+</div>
+<div id=share-options-mask class=share-options-mask></div>
+</div>
+<div id=about>
+<div id=about-card>
+<div id=about-btn-close>
+<i class="fa fa-times"></i>
+</div>
+<img id=about-card-picture src="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=110" alt=作者的图片>
+<h4 id=about-card-name>MHKING</h4>
+<div id=about-card-bio>生命不在于长短，而在于活得有意义！</div>
+<div id=about-card-job>
+<i class="fa fa-briefcase"></i>
+<br>
+苦逼嵌入式人员
+</div>
+<div id=about-card-location>
+<i class="fa fa-map-marker-alt"></i>
+<br>
+广西贵港
+</div>
+</div>
+</div>
+<div id=cover style=background-image:url(https://mhking-liao.github.io/images/cover.jpg)></div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://mhking-liao.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js></script>
+<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$('pre.code-highlight > code, pre > code').each(function(b,a){$(this).hasClass('codeblock')||$(this).addClass('codeblock'),hljs.highlightBlock(a)})})</script>
+</body>
+</html>

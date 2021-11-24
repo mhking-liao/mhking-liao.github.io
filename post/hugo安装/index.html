@@ -1,22 +1,26 @@
 <!doctype html><html lang=zh-cn>
 <head>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"Website","@id":"https:\/\/mhking-liao.github.io\/","author":{"@type":"Person","name":"MHKING","image":"https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460"},"name":"MHKING BLOG","description":"hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~\/home_opt\t#home下软件安装包位置的home_opt，可设置自己的位置 cd ~\/home_opt wget -c https:\/\/go.dev\/dl\/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install\t#重命名 sudo mv -f go_install \/usr\/local\t#移动到安装区 cd \/usr\/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~\/home_opt\/go_work ~\/home_opt\/go_work\/src ~\/home_opt\/go_work\/bin\t#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~\/.zshrc #内容： export GOROOT=\/usr\/local\/go_install export GOPATH=~\/home_opt\/go_work export PATH=$GOPATH\/bin:$GOROOT\/bin:$PATH source ~\/.zshrc\t#环境变量生效 export\t#输出 默认shell的修改使用下面的：echo $shell\t#查看默认shell sudo gedit ~\/.bashrc source ~\/.","url":"https:\/\/mhking-liao.github.io\/post\/hugo%E5%AE%89%E8%A3%85\/","keywords":"[]"}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"Website","@id":"https:\/\/mhking-liao.github.io\/","author":{"@type":"Person","name":"MHKING","image":"https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460"},"name":"MHKING BLOG","description":"Hugo安装 一、安装Git sudo apt install git 配置ssh 二、hugo安装 https:\/\/github.com\/gohugoio\/hugo\/releases\n  下载最新的扩展版本 ( hugo_extended_0.89.4_Linux-64bit.tar.gz)。   创建一个新目录： mkdir hugo   将您下载的文件解压缩到hugo.   切换到新目录： cd hugo   安装雨果： sudo install hugo \/usr\/bin   版本 hugo version   三、配置本地站点 1.建立本地站点 # 在建立站点 mkdir ~\/home_opt\/blog cd ~\/home_opt\/blog hugo new site hugo_blog cd hugo_blog cd ~\/home_opt\/blog\/hugo_blog git init\t#将~\/home_opt\/blog\/hugo_blog设置为空的初始化仓库,github默认仓库链接到hugo_blog git status\t#文件变动 git add .\t#文件变动指定目录，.代表全部 git commit -m \u0026#34;first commit\u0026#34;\t#文件变动提交至暂存区 2.","url":"https:\/\/mhking-liao.github.io\/post\/hugo%E5%AE%89%E8%A3%85\/","keywords":"[]"}</script>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name=author content="MHKING">
 <meta name=keywords content>
-<meta name=description content="hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
-<meta property="og:description" content="hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
+<meta name=description content="Hugo安装 一、安装Git sudo apt install git 配置ssh 二、hugo安装 https://github.com/gohugoio/hugo/releases
+  下载最新的扩展版本 ( hugo_extended_0.89.4_Linux-64bit.tar.gz)。   创建一个新目录： mkdir hugo   将您下载的文件解压缩到hugo.   切换到新目录： cd hugo   安装雨果： sudo install hugo /usr/bin   版本 hugo version   三、配置本地站点 1.建立本地站点 # 在建立站点 mkdir ~/home_opt/blog cd ~/home_opt/blog hugo new site hugo_blog cd hugo_blog cd ~/home_opt/blog/hugo_blog git init	#将~/home_opt/blog/hugo_blog设置为空的初始化仓库,github默认仓库链接到hugo_blog git status	#文件变动 git add .	#文件变动指定目录，.代表全部 git commit -m &#34;first commit&#34;	#文件变动提交至暂存区 2.">
+<meta property="og:description" content="Hugo安装 一、安装Git sudo apt install git 配置ssh 二、hugo安装 https://github.com/gohugoio/hugo/releases
+  下载最新的扩展版本 ( hugo_extended_0.89.4_Linux-64bit.tar.gz)。   创建一个新目录： mkdir hugo   将您下载的文件解压缩到hugo.   切换到新目录： cd hugo   安装雨果： sudo install hugo /usr/bin   版本 hugo version   三、配置本地站点 1.建立本地站点 # 在建立站点 mkdir ~/home_opt/blog cd ~/home_opt/blog hugo new site hugo_blog cd hugo_blog cd ~/home_opt/blog/hugo_blog git init	#将~/home_opt/blog/hugo_blog设置为空的初始化仓库,github默认仓库链接到hugo_blog git status	#文件变动 git add .	#文件变动指定目录，.代表全部 git commit -m &#34;first commit&#34;	#文件变动提交至暂存区 2.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MHKING BLOG">
 <meta name=twitter:title content="MHKING BLOG">
 <meta property="og:url" content="https://mhking-liao.github.io/post/hugo%E5%AE%89%E8%A3%85/">
 <meta property="twitter:url" content="https://mhking-liao.github.io/post/hugo%E5%AE%89%E8%A3%85/">
 <meta property="og:site_name" content="MHKING BLOG">
-<meta property="og:description" content="hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
-<meta name=twitter:description content="hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
+<meta property="og:description" content="Hugo安装 一、安装Git sudo apt install git 配置ssh 二、hugo安装 https://github.com/gohugoio/hugo/releases
+  下载最新的扩展版本 ( hugo_extended_0.89.4_Linux-64bit.tar.gz)。   创建一个新目录： mkdir hugo   将您下载的文件解压缩到hugo.   切换到新目录： cd hugo   安装雨果： sudo install hugo /usr/bin   版本 hugo version   三、配置本地站点 1.建立本地站点 # 在建立站点 mkdir ~/home_opt/blog cd ~/home_opt/blog hugo new site hugo_blog cd hugo_blog cd ~/home_opt/blog/hugo_blog git init	#将~/home_opt/blog/hugo_blog设置为空的初始化仓库,github默认仓库链接到hugo_blog git status	#文件变动 git add .	#文件变动指定目录，.代表全部 git commit -m &#34;first commit&#34;	#文件变动提交至暂存区 2.">
+<meta name=twitter:description content="Hugo安装 一、安装Git sudo apt install git 配置ssh 二、hugo安装 https://github.com/gohugoio/hugo/releases
+  下载最新的扩展版本 ( hugo_extended_0.89.4_Linux-64bit.tar.gz)。   创建一个新目录： mkdir hugo   将您下载的文件解压缩到hugo.   切换到新目录： cd hugo   安装雨果： sudo install hugo /usr/bin   版本 hugo version   三、配置本地站点 1.建立本地站点 # 在建立站点 mkdir ~/home_opt/blog cd ~/home_opt/blog hugo new site hugo_blog cd hugo_blog cd ~/home_opt/blog/hugo_blog git init	#将~/home_opt/blog/hugo_blog设置为空的初始化仓库,github默认仓库链接到hugo_blog git status	#文件变动 git add .	#文件变动指定目录，.代表全部 git commit -m &#34;first commit&#34;	#文件变动提交至暂存区 2.">
 <meta property="og:locale" content="zh-cn">
 <meta name=twitter:card content="summary">
 <meta property="og:image" content="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=640">
@@ -117,59 +121,38 @@
 </div>
 <div class="post-content markdown">
 <div class=main-content-wrap>
-<h1 id=hugo安装>hugo安装</h1>
+<h1 id=hugo安装>Hugo安装</h1>
 <h2 id=一安装git>一、安装Git</h2>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo apt install git
-</code></pre></div><p>配置ssh</p>
+</code></pre></div><h3 id=配置ssh>配置ssh</h3>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>
-</code></pre></div><h2 id=二安装go>二、安装go</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>mkdir ~/home_opt		<span style=color:#75715e>#home下软件安装包位置的home_opt，可设置自己的位置</span>
-cd ~/home_opt
-wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz
-sudo tar -xz go1.17.3.linux-amd64.tar.gz
-mv -f go go_install						<span style=color:#75715e>#重命名</span>
-sudo mv -f  go_install /usr/local		<span style=color:#75715e>#移动到安装区</span>
-cd /usr/local
-sudo chmod -R <span style=color:#ae81ff>0777</span> go_install
-</code></pre></div><p>添加到<code>$PATH</code>环境变量</p>
-<p><code>GOROOT</code>是系统上安装Go软件包的位置</p>
-<p><code>GOPATH</code>是工作目录的位置</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># src：go在包安装、文件编译时自动寻找区，bin：go执行命令区</span>
-mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	<span style=color:#75715e>#go工作区</span>
-sudo chmod -R <span style=color:#ae81ff>0777</span> go_work
-</code></pre></div><p>修改环境变量，我的shell改为zsh了。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo gedit ~/.zshrc
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#内容：</span>
-export GOROOT<span style=color:#f92672>=</span>/usr/local/go_install
-export GOPATH<span style=color:#f92672>=</span>~/home_opt/go_work
-export PATH<span style=color:#f92672>=</span>$GOPATH/bin:$GOROOT/bin:$PATH
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>source ~/.zshrc		<span style=color:#75715e>#环境变量生效</span>
-export				<span style=color:#75715e>#输出</span>
-</code></pre></div><p>默认shell的修改使用下面的：</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>echo $shell			<span style=color:#75715e>#查看默认shell</span>
-sudo gedit ~/.bashrc
-source ~/.bashrc	<span style=color:#75715e>#环境变量生效</span>
-export				<span style=color:#75715e>#输出</span>
-</code></pre></div><p>效果：关闭shell，重启终端输入（任意shell能输出版本）</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>go version
-</code></pre></div><p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123173529-319x63.png alt=截屏-20211123173529-319x63></p>
-<h2 id=二编译hugo>二、编译hugo</h2>
-<p><a href=https://github.com/gohugoio/hugo>官网安装</a>（Mac，windows，linux如下）</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>mkdir ~/home_opt/src
-cd ~/home_opt/src
-git clone https://github.com/gohugoio/hugo.git
-cd hugo
-go install
-</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#错误：</span>
-go: github.com/bep/debounce@v1.2.0: Get <span style=color:#e6db74>&#34;https://proxy.golang.org/github.com/bep/debounce/@v/v1.2.0.mod&#34;</span>: EOF
-
-</code></pre></div><p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123180633-803x36.png alt=截屏-20211123180633-803x36></p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#国内ping不通proxy.golang.org</span>
-<span style=color:#75715e>#输入以下即可：</span>
-go env -w GOPROXY<span style=color:#f92672>=</span>https://goproxy.cn
-</code></pre></div><p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123180648-473x62.png alt=截屏-20211123180648-473x62></p>
+</code></pre></div><h2 id=二hugo安装>二、hugo安装</h2>
+<p><a href=https://github.com/gohugoio/hugo/releases>https://github.com/gohugoio/hugo/releases</a></p>
+<ol>
+<li>
+<h4 id=下载最新的扩展版本--hugo_extended_0894_linux-64bittargzhttpsgithubcomgohugoiohugoreleasesdownloadv0894hugo_extended_0894_linux-64bittargz>下载最新的扩展版本 ( <a href=https://github.com/gohugoio/hugo/releases/download/v0.89.4/hugo_extended_0.89.4_Linux-64bit.tar.gz>hugo_extended_0.89.4_Linux-64bit.tar.gz</a>)。</h4>
+</li>
+<li>
+<h4 id=创建一个新目录>创建一个新目录：</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>mkdir hugo
+</code></pre></div></li>
+<li>
+<h4 id=将您下载的文件解压缩到hugo>将您下载的文件解压缩到<code>hugo</code>.</h4>
+</li>
+<li>
+<h4 id=切换到新目录>切换到新目录：</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>cd hugo
+</code></pre></div></li>
+<li>
+<h4 id=安装雨果>安装雨果：</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>sudo install hugo /usr/bin
+</code></pre></div></li>
+<li>
+<h4 id=版本>版本</h4>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>hugo version
-</code></pre></div><h2 id=三配置本地站点>三、配置本地站点</h2>
+</code></pre></div></li>
+</ol>
+<h2 id=三配置本地站点>三、配置本地站点</h2>
 <h2 id=1建立本地站点>1.建立本地站点</h2>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e># 在建立站点</span>
 mkdir ~/home_opt/blog
@@ -186,6 +169,10 @@ git commit -m <span style=color:#e6db74>&#34;first commit&#34;</span>	<span styl
 <p><a href=https://themes.gohugo.io/>https://themes.gohugo.io/</a></p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#克隆主题到themes，主题对应一个作者的github仓库，submodule add将他人仓库链接到自己的仓库，主题更新时我们网页同步更新</span>
 git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme themes/hugo-tranquilpeak-theme
+
+git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme 
+
+git submodule add https://github.com/mhking-liao/starter-hugo-academic.git themes/starter-hugo-academic
 <span style=color:#75715e>#自己看主题配置，每个主题都不同，都需要修改一些配置。有些还要装插件</span>
 </code></pre></div><p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123182529-2539x1050.png alt=截屏-20211123182529-2539x1050></p>
 <p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123182627-2254x1055.png alt=截屏-20211123182627-2254x1055></p>
@@ -208,7 +195,7 @@ gedit content/post/test_post.md		<span style=color:#75715e>#hugo命令建立md�
 </span><span style=color:#75715e>### 人生的幸福，一半要争，一半要随。争，不是与他人，而是与困苦。没有唾手可得的幸福，发愤图强，主动争取才能一步步接近幸福。随，不是随波逐流，而是知止而后安。能力与条件的限制，很多人事只能随遇而安，随缘而止。争，人生少遗憾；随，知足者常乐。最怕该争时不争，该止时不止，总在纠结中痛苦着。
 </span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server
 </code></pre></div><p><img src=https://mhking-liao.github.io/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123185932-814x478.png alt=截屏-20211123185932-814x478></p>
-<p>浏览器输入：http://localhost:1313/</p>
+<h3 id=浏览器输入httplocalhost1313>浏览器输入：http://localhost:1313/</h3>
 <h2 id=四上传hugo至github>四、上传Hugo至Github</h2>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>git status
 git add .
@@ -217,7 +204,7 @@ git branch -M main	<span style=color:#75715e>#命名分支为main</span>
 <span style=color:#75715e>#github仓库为空，本地仓库添加github仓库地址</span>
 git remote add origin https://github.com/mhking-liao/mhking-liao.github.io.git
 git push -u origin main	<span style=color:#75715e>#改动文件上传至github</span>
-</code></pre></div><p>建立工作流，这是静态网页生成脚本，hugo官网有介绍，<a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/>Host on GitHub</a></p>
+</code></pre></div><h3 id=建立工作流这是静态网页生成脚本hugo官网有介绍host-on-githubhttpsgohugoiohosting-and-deploymenthosting-on-github>建立工作流，这是静态网页生成脚本，hugo官网有介绍，<a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/>Host on GitHub</a></h3>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>mkdir .github
 cd .github
 mkdir workflows
@@ -272,14 +259,15 @@ git push
 
 git status
 git add .
-git commit -m <span style=color:#e6db74>&#34;hugo install to github&#34;</span>
+git commit -m <span style=color:#e6db74>&#34;Article update 2021.11.24_11:45&#34;</span>
 git push
 
-</code></pre></div><p>githut分支源默认改为gh-pages</p>
+</code></pre></div><h3 id=githut分支源默认改为gh-pages>githut分支源默认改为gh-pages</h3>
+<hr>
 <h2 id=总结>总结：</h2>
-<p>虽说国内外教程挺多，但是一堆坑还不一定能弄完，有搞一半就没了，多多少少有缺斤少两的。（windows坑最多，hexo兼容最差，那个npm一言难尽，一堆过期包，修都要半天，主题都没法装）</p>
-<p>最后两步骤，上传Hugo源码和静态文件的就没几个讲清楚的，整完主题不能显示的一堆&mldr;..themes没链接好，还是太小白，大神不大想讲</p>
-<p>学好github的分布式开发吧。用官网的安装方式就行，个人向的水平参差不齐。</p>
+<h3 id=虽说国内外教程挺多但是一堆坑还不一定能弄完有搞一半就没了多多少少有缺斤少两的windows坑最多hexo兼容最差那个npm一言难尽一堆过期包修都要半天主题都没法装>虽说国内外教程挺多，但是一堆坑还不一定能弄完，有搞一半就没了，多多少少有缺斤少两的。（windows坑最多，hexo兼容最差，那个npm一言难尽，一堆过期包，修都要半天，主题都没法装）</h3>
+<h3 id=最后两步骤上传hugo源码和静态文件的就没几个讲清楚的整完主题不能显示的一堆themes没链接好还是太小白大神不大想讲>最后两步骤，上传Hugo源码和静态文件的就没几个讲清楚的，整完主题不能显示的一堆&mldr;..themes没链接好，还是太小白，大神不大想讲</h3>
+<h3 id=学好github的分布式开发吧用官网的安装方式就行个人向的水平参差不齐>学好github的分布式开发吧。用官网的安装方式就行，个人向的水平参差不齐。</h3>
 <hr>
 <hr>
 </div>
@@ -289,7 +277,7 @@ git push
 <nav>
 <ul class="post-actions post-action-nav">
 <li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/git%E4%B8%8A%E4%BC%A0%E8%A6%86%E7%9B%96%E5%88%A0%E9%99%A4/ data-tooltip aria-label="下一篇: ">
+<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/ data-tooltip aria-label="下一篇: ">
 <i class="fa fa-angle-left"></i>
 <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
 </a>
@@ -352,7 +340,7 @@ git push
 <nav>
 <ul class="post-actions post-action-nav">
 <li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/git%E4%B8%8A%E4%BC%A0%E8%A6%86%E7%9B%96%E5%88%A0%E9%99%A4/ data-tooltip aria-label="下一篇: ">
+<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/ data-tooltip aria-label="下一篇: ">
 <i class="fa fa-angle-left"></i>
 <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
 </a>
