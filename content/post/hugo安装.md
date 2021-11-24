@@ -1,3 +1,18 @@
+---
+title: "Hugo to Github"
+date: 2021-11-24T11:57:03+08:00
+categories:
+- 广西贵港
+- 家中
+tags:
+- 博客
+- 安装
+keywords:
+- tech
+#thumbnailImage: //example.com/image.jpg
+
+---
+
 # Hugo安装
 
 ## 一、安装Git

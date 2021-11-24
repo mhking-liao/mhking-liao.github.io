@@ -1,3 +1,18 @@
+---
+title: "go语言"
+date: 2021-11-24T11:57:03+08:00
+categories:
+- 广西贵港
+- 家中
+tags:
+- 安装
+keywords:
+- tech
+#thumbnailImage: //example.com/image.jpg
+
+
+---
+
 # go语言编译安装Hugo
 
 ## 二、安装go
