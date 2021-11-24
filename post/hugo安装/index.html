@@ -1,42 +1,22 @@
 <!doctype html><html lang=zh-cn>
 <head>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"Website","@id":"https:\/\/mhking-liao.github.io\/","author":{"@type":"Person","name":"MHKING","image":"https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460"},"name":"MHKING BLOG","description":"hugo安装 一、安装Git sudo apt install git 配置ssh\n二、安装go mkdir ~\/home_opt\t#home下软件安装包位置的home_opt，可设置自己的位置 cd ~\/home_opt wget -c https:\/\/go.dev\/dl\/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install\t#重命名 sudo mv -f go_install \/usr\/local\t#移动到安装区 cd \/usr\/local sudo chmod -R 0777 go_install 添加到$PATH环境变量\nGOROOT是系统上安装Go软件包的位置\nGOPATH是工作目录的位置\n# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~\/home_opt\/go_work ~\/home_opt\/go_work\/src ~\/home_opt\/go_work\/bin\t#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。\nsudo gedit ~\/.zshrc #内容： export GOROOT=\/usr\/local\/go_install export GOPATH=~\/home_opt\/go_work export PATH=$GOPATH\/bin:$GOROOT\/bin:$PATH source ~\/.zshrc\t#环境变量生效 export\t#输出 默认shell的修改使用下面的：","url":"https:\/\/mhking-liao.github.io\/post\/hugo%E5%AE%89%E8%A3%85\/","keywords":"[]"}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"Website","@id":"https:\/\/mhking-liao.github.io\/","author":{"@type":"Person","name":"MHKING","image":"https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460"},"name":"MHKING BLOG","description":"hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~\/home_opt\t#home下软件安装包位置的home_opt，可设置自己的位置 cd ~\/home_opt wget -c https:\/\/go.dev\/dl\/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install\t#重命名 sudo mv -f go_install \/usr\/local\t#移动到安装区 cd \/usr\/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~\/home_opt\/go_work ~\/home_opt\/go_work\/src ~\/home_opt\/go_work\/bin\t#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~\/.zshrc #内容： export GOROOT=\/usr\/local\/go_install export GOPATH=~\/home_opt\/go_work export PATH=$GOPATH\/bin:$GOROOT\/bin:$PATH source ~\/.zshrc\t#环境变量生效 export\t#输出 默认shell的修改使用下面的：echo $shell\t#查看默认shell sudo gedit ~\/.bashrc source ~\/.","url":"https:\/\/mhking-liao.github.io\/post\/hugo%E5%AE%89%E8%A3%85\/","keywords":"[]"}</script>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name=author content="MHKING">
 <meta name=keywords content>
-<meta name=description content="hugo安装 一、安装Git sudo apt install git 配置ssh
-二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
-GOROOT是系统上安装Go软件包的位置
-GOPATH是工作目录的位置
-# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
-sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：">
-<meta property="og:description" content="hugo安装 一、安装Git sudo apt install git 配置ssh
-二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
-GOROOT是系统上安装Go软件包的位置
-GOPATH是工作目录的位置
-# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
-sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：">
+<meta name=description content="hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
+<meta property="og:description" content="hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MHKING BLOG">
 <meta name=twitter:title content="MHKING BLOG">
 <meta property="og:url" content="https://mhking-liao.github.io/post/hugo%E5%AE%89%E8%A3%85/">
 <meta property="twitter:url" content="https://mhking-liao.github.io/post/hugo%E5%AE%89%E8%A3%85/">
 <meta property="og:site_name" content="MHKING BLOG">
-<meta property="og:description" content="hugo安装 一、安装Git sudo apt install git 配置ssh
-二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
-GOROOT是系统上安装Go软件包的位置
-GOPATH是工作目录的位置
-# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
-sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：">
-<meta name=twitter:description content="hugo安装 一、安装Git sudo apt install git 配置ssh
-二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
-GOROOT是系统上安装Go软件包的位置
-GOPATH是工作目录的位置
-# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。
-sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：">
+<meta property="og:description" content="hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
+<meta name=twitter:description content="hugo安装 一、安装Git sudo apt install git 配置ssh二、安装go mkdir ~/home_opt	#home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install	#重命名 sudo mv -f go_install /usr/local	#移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量GOROOT是系统上安装Go软件包的位置GOPATH是工作目录的位置# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区 mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区 sudo chmod -R 0777 go_work 修改环境变量，我的shell改为zsh了。sudo gedit ~/.zshrc #内容： export GOROOT=/usr/local/go_install export GOPATH=~/home_opt/go_work export PATH=$GOPATH/bin:$GOROOT/bin:$PATH source ~/.zshrc	#环境变量生效 export	#输出 默认shell的修改使用下面的：echo $shell	#查看默认shell sudo gedit ~/.bashrc source ~/.">
 <meta property="og:locale" content="zh-cn">
 <meta name=twitter:card content="summary">
 <meta property="og:image" content="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=640">
@@ -296,8 +276,7 @@ git commit -m <span style=color:#e6db74>&#34;hugo install to github&#34;</span>
 git push
 
 </code></pre></div><p>githut分支源默认改为gh-pages</p>
-<hr>
-<h4 id=总结>总结：</h4>
+<h2 id=总结>总结：</h2>
 <p>虽说国内外教程挺多，但是一堆坑还不一定能弄完，有搞一半就没了，多多少少有缺斤少两的。（windows坑最多，hexo兼容最差，那个npm一言难尽，一堆过期包，修都要半天，主题都没法装）</p>
 <p>最后两步骤，上传Hugo源码和静态文件的就没几个讲清楚的，整完主题不能显示的一堆&mldr;..themes没链接好，还是太小白，大神不大想讲</p>
 <p>学好github的分布式开发吧。用官网的安装方式就行，个人向的水平参差不齐。</p>
