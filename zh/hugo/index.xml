@@ -7,8 +7,8 @@ git add . 3、用命令 git commit告诉Git，把文件提交到仓库。引号�
 git commit -m 'first commit' 4、关联到远程库
 git remote add origin 你的远程库地址 如：
 git remote add origin https://github.com/cade8800/ionic-demo.git 5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
-git pull --rebase origin master 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
-git push -u origin master *、状态查询命令
+git pull --rebase origin main 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
+git push -u origin main *、状态查询命令
 git status 三、Git上传、覆盖、删除 然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。</description></item><item><title>go语言</title><link>/zh/hugo/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/</link><pubDate>Wed, 24 Nov 2021 11:57:03 +0800</pubDate><guid>/zh/hugo/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/</guid><description>go语言编译安装Hugo 二、安装go mkdir ~/home_opt #home下软件安装包位置的home_opt，可设置自己的位置 cd ~/home_opt wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz sudo tar -xz go1.17.3.linux-amd64.tar.gz mv -f go go_install #重命名 sudo mv -f go_install /usr/local #移动到安装区 cd /usr/local sudo chmod -R 0777 go_install 添加到$PATH环境变量
 GOROOT是系统上安装Go软件包的位置
 GOPATH是工作目录的位置
@@ -26,4 +26,5 @@ echo $shell #查看默认shell sudo gedit ~/.bashrc source ~/.</description></it
 &amp;lt;div align=&amp;#34;right&amp;#34;&amp;gt; &amp;lt;img src=https://img-blog.csdnimg.cn/20200822014538211.png /&amp;gt; &amp;lt;/div&amp;gt; 调整图片大小 等比缩放 相对于父级窗口 使用百分比只定义宽即可等比例缩放。注意：宽度相对于图片所在父级窗口。
 &amp;lt;img src=https://img-blog.csdnimg.cn/20200822014538211.png width=60% /&amp;gt; 相对于自身 非等比缩放 将图片的宽高缩小或放大为原来的指定百分比。
 固定宽高 &amp;lt;img src=https://img-blog.csdnimg.cn/20200822014538211.png width=200 height=100 /&amp;gt;</description></item><item><title/><link>/zh/hugo/picgo%E5%AE%89%E8%A3%85/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/zh/hugo/picgo%E5%AE%89%E8%A3%85/</guid><description>PICgo
-https://github.com/Molunerfinn/PicGo/releases</description></item></channel></rss>
+https://github.com/Molunerfinn/PicGo/releases</description></item><item><title/><link>/zh/hugo/%E8%85%BE%E8%AE%AFcos+typora+picgo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/zh/hugo/%E8%85%BE%E8%AE%AFcos+typora+picgo/</guid><description>腾讯cos+typora+picgo，腾讯云cos
+markdown显示，而博客网页不显示：腾讯云存储修改公开权限</description></item></channel></rss>

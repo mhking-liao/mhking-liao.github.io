@@ -7,18 +7,18 @@
 <meta name=author content="Mathieu Cornic">
 <link rel=icon href=/images/favicon.png type=image/png>
 <title>Hugo to Github :: MHKING BOLG</title>
-<link href=/css/nucleus.css?1637757810 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1637757810 rel=stylesheet>
-<link href=/css/hybrid.css?1637757810 rel=stylesheet>
-<link href=/css/featherlight.min.css?1637757810 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1637757810 rel=stylesheet>
-<link href=/css/auto-complete.css?1637757810 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1637757810 rel=stylesheet>
-<link href=/css/theme.css?1637757810 rel=stylesheet>
-<link href=/css/tabs.css?1637757810 rel=stylesheet>
-<link href=/css/hugo-theme.css?1637757810 rel=stylesheet>
-<link href=/css/theme-green.css?1637757810 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1637757810></script>
+<link href=/css/nucleus.css?1637762419 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1637762419 rel=stylesheet>
+<link href=/css/hybrid.css?1637762419 rel=stylesheet>
+<link href=/css/featherlight.min.css?1637762419 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1637762419 rel=stylesheet>
+<link href=/css/auto-complete.css?1637762419 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1637762419 rel=stylesheet>
+<link href=/css/theme.css?1637762419 rel=stylesheet>
+<link href=/css/tabs.css?1637762419 rel=stylesheet>
+<link href=/css/hugo-theme.css?1637762419 rel=stylesheet>
+<link href=/css/theme-green.css?1637762419 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1637762419></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/zh/hugo/hugo%E5%AE%89%E8%A3%85/>
@@ -33,10 +33,10 @@
 <input data-search-input id=search-by type=search placeholder>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1637757810></script>
-<script type=text/javascript src=/js/auto-complete.js?1637757810></script>
+<script type=text/javascript src=/js/lunr.min.js?1637762419></script>
+<script type=text/javascript src=/js/auto-complete.js?1637762419></script>
 <script type=text/javascript>var baseurl="//zh"</script>
-<script type=text/javascript src=/js/search.js?1637757810></script>
+<script type=text/javascript src=/js/search.js?1637762419></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -88,6 +88,11 @@ Hugo to Github
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
+<li data-nav-id=/zh/hugo/%E8%85%BE%E8%AE%AFcos+typora+picgo/ title class=dd-item>
+<a href=/zh/hugo/%E8%85%BE%E8%AE%AFcos+typora+picgo/>
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
 </ul>
 </li>
 <li data-nav-id=/zh/basics/ title=基础知识 class=dd-item>
@@ -96,23 +101,9 @@ Hugo to Github
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/zh/basics/first-content/ title=第一章 class=dd-item>
-<a href=/zh/basics/first-content/>
+<li data-nav-id=/zh/basics/first/ title=第一章 class=dd-item>
+<a href=/zh/basics/first/>
 第一章
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/zh/post/ title=Posts class=dd-item>
-<a href=/zh/post/>
-Posts
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/zh/post/test_post/ title=人生哲学 class=dd-item>
-<a href=/zh/post/test_post/>
-人生哲学
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
@@ -266,7 +257,7 @@ mkdir ~/home_opt/blog
 cd ~/home_opt/blog
 hugo new site hugo_blog
 cd hugo_blog
-</code></pre></div><p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242031451.png alt=截屏-20211123215327-691x86></p>
+</code></pre></div><p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056572.png alt=截屏-20211123215327-691x86></p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>cd ~/home_opt/blog/hugo_blog
 git init	<span style=color:#75715e>#将~/home_opt/blog/hugo_blog设置为空的初始化仓库,github默认仓库链接到hugo_blog</span>
 git status	<span style=color:#75715e>#文件变动</span>
@@ -274,15 +265,15 @@ git add .	<span style=color:#75715e>#文件变动指定目录，.代表全部</s
 git commit -m <span style=color:#e6db74>&#34;first commit&#34;</span>	<span style=color:#75715e>#文件变动提交至暂存区</span>
 </code></pre></div><h2 id=2添加博客主题就是样式>2.添加博客主题，就是样式</h2>
 <p><a href=https://themes.gohugo.io/>https://themes.gohugo.io/</a></p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#克隆主题到themes，主题对应一个作者的github仓库，submodule add将他人仓库链接到自己的仓库，主题更新时我们网页同步更新</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#推荐git submodule add theme-* themes/theme-*</span>
+<span style=color:#75715e>#git clone（好多主题都不推荐的，写的是有些内容可能显示异常）</span>
+<span style=color:#75715e>#一个主题对应一个作者的github仓库，submodule add将他人仓库链接到自己的仓库，主题更新时我们的网页主题同步更新</span>
+
 git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme themes/hugo-tranquilpeak-theme
 
-git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme 
-
-git submodule add https://github.com/mhking-liao/starter-hugo-academic.git themes/starter-hugo-academic
 <span style=color:#75715e>#自己看主题配置，每个主题都不同，都需要修改一些配置。有些还要装插件</span>
-</code></pre></div><p><img src=/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123182529-2539x1050.png alt=截屏-20211123182529-2539x1050></p>
-<p><img src=/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123182627-2254x1055.png alt=截屏-20211123182627-2254x1055></p>
+</code></pre></div><p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056801.png alt=截屏-20211123182529-2539x1050></p>
+<p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056216.png alt=截屏-20211123182627-2254x1055></p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>cd ~/home_opt/blog/hugo_blog
 <span style=color:#75715e># 一般主题会有一个配置好的文件，在exampleSite下，替换站点根目录下的config.toml即可</span>
 rm -rf config.toml
@@ -301,7 +292,7 @@ gedit content/post/test_post.md		<span style=color:#75715e>#hugo命令建立md�
 <span style=color:#75715e># 有志者事竟成
 </span><span style=color:#75715e>### 人生的幸福，一半要争，一半要随。争，不是与他人，而是与困苦。没有唾手可得的幸福，发愤图强，主动争取才能一步步接近幸福。随，不是随波逐流，而是知止而后安。能力与条件的限制，很多人事只能随遇而安，随缘而止。争，人生少遗憾；随，知足者常乐。最怕该争时不争，该止时不止，总在纠结中痛苦着。
 </span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server
-</code></pre></div><p><img src=/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123185932-814x478.png alt=截屏-20211123185932-814x478></p>
+</code></pre></div><p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056793.png alt=截屏-20211123185932-814x478></p>
 <h3 id=浏览器输入httplocalhost1313>浏览器输入：http://localhost:1313/</h3>
 <h2 id=四上传hugo至github>四、上传Hugo至Github</h2>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>git status
@@ -358,12 +349,12 @@ git push
 </code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#修改config.toml文件</span>
 baseURL <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;github地址&#34;</span>
 disqusShortname <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;hugo-tranquilpeak-theme&#34;</span>
-</code></pre></div><p><img src=/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123233301-1715x1034.png alt=截屏-20211123233301-1715x1034></p>
+</code></pre></div><p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056365.png alt=截屏-20211123233301-1715x1034></p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>git status
 git add .
 git commit -m <span style=color:#e6db74>&#34;update toml&#34;</span>
 git push
-
+<span style=color:#75715e>#自用样本，可自写sh脚本</span>
 git status
 git add .
 git commit -m <span style=color:#e6db74>&#34;Article update 2021.11.24_11:45&#34;</span>
@@ -393,16 +384,16 @@ git push
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1637757810></script>
-<script src=/js/perfect-scrollbar.min.js?1637757810></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1637757810></script>
-<script src=/js/jquery.sticky.js?1637757810></script>
-<script src=/js/featherlight.min.js?1637757810></script>
-<script src=/js/highlight.pack.js?1637757810></script>
+<script src=/js/clipboard.min.js?1637762419></script>
+<script src=/js/perfect-scrollbar.min.js?1637762419></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1637762419></script>
+<script src=/js/jquery.sticky.js?1637762419></script>
+<script src=/js/featherlight.min.js?1637762419></script>
+<script src=/js/highlight.pack.js?1637762419></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1637757810></script>
-<script src=/js/learn.js?1637757810></script>
-<script src=/js/hugo-learn.js?1637757810></script>
+<script src=/js/modernizr.custom-3.6.0.js?1637762419></script>
+<script src=/js/learn.js?1637762419></script>
+<script src=/js/hugo-learn.js?1637762419></script>
 <script src=https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>

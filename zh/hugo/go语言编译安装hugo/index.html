@@ -7,18 +7,18 @@
 <meta name=author content="Mathieu Cornic">
 <link rel=icon href=/images/favicon.png type=image/png>
 <title>go语言 :: MHKING BOLG</title>
-<link href=/css/nucleus.css?1637757810 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1637757810 rel=stylesheet>
-<link href=/css/hybrid.css?1637757810 rel=stylesheet>
-<link href=/css/featherlight.min.css?1637757810 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1637757810 rel=stylesheet>
-<link href=/css/auto-complete.css?1637757810 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1637757810 rel=stylesheet>
-<link href=/css/theme.css?1637757810 rel=stylesheet>
-<link href=/css/tabs.css?1637757810 rel=stylesheet>
-<link href=/css/hugo-theme.css?1637757810 rel=stylesheet>
-<link href=/css/theme-green.css?1637757810 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1637757810></script>
+<link href=/css/nucleus.css?1637762419 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1637762419 rel=stylesheet>
+<link href=/css/hybrid.css?1637762419 rel=stylesheet>
+<link href=/css/featherlight.min.css?1637762419 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1637762419 rel=stylesheet>
+<link href=/css/auto-complete.css?1637762419 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1637762419 rel=stylesheet>
+<link href=/css/theme.css?1637762419 rel=stylesheet>
+<link href=/css/tabs.css?1637762419 rel=stylesheet>
+<link href=/css/hugo-theme.css?1637762419 rel=stylesheet>
+<link href=/css/theme-green.css?1637762419 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1637762419></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=/zh/hugo/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/>
@@ -33,10 +33,10 @@
 <input data-search-input id=search-by type=search placeholder>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1637757810></script>
-<script type=text/javascript src=/js/auto-complete.js?1637757810></script>
+<script type=text/javascript src=/js/lunr.min.js?1637762419></script>
+<script type=text/javascript src=/js/auto-complete.js?1637762419></script>
 <script type=text/javascript>var baseurl="//zh"</script>
-<script type=text/javascript src=/js/search.js?1637757810></script>
+<script type=text/javascript src=/js/search.js?1637762419></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -88,6 +88,11 @@ Hugo to Github
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
+<li data-nav-id=/zh/hugo/%E8%85%BE%E8%AE%AFcos+typora+picgo/ title class=dd-item>
+<a href=/zh/hugo/%E8%85%BE%E8%AE%AFcos+typora+picgo/>
+<i class="fas fa-check read-icon"></i>
+</a>
+</li>
 </ul>
 </li>
 <li data-nav-id=/zh/basics/ title=基础知识 class=dd-item>
@@ -96,23 +101,9 @@ Hugo to Github
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/zh/basics/first-content/ title=第一章 class=dd-item>
-<a href=/zh/basics/first-content/>
+<li data-nav-id=/zh/basics/first/ title=第一章 class=dd-item>
+<a href=/zh/basics/first/>
 第一章
-<i class="fas fa-check read-icon"></i>
-</a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/zh/post/ title=Posts class=dd-item>
-<a href=/zh/post/>
-Posts
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/zh/post/test_post/ title=人生哲学 class=dd-item>
-<a href=/zh/post/test_post/>
-人生哲学
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
@@ -182,11 +173,7 @@ Posts
 <nav id=TableOfContents>
 <ul>
 <li><a href=#二安装go>二、安装go</a></li>
-<li><a href=#二编译hugo>二、编译hugo</a>
-<ul>
-<li><a href=#heading></a></li>
-</ul>
-</li>
+<li><a href=#二编译hugo>二、编译hugo</a></li>
 </ul>
 </nav>
 </div>
@@ -233,7 +220,7 @@ source ~/.bashrc	<span style=color:#75715e>#环境变量生效</span>
 export				<span style=color:#75715e>#输出</span>
 </code></pre></div><p>效果：关闭shell，重启终端输入（任意shell能输出版本）</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>go version
-</code></pre></div><p><img src=/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123173529-319x63.png alt=截屏-20211123173529-319x63></p>
+</code></pre></div><p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242116100.png alt=截屏-20211123173529-319x63></p>
 <h2 id=二编译hugo>二、编译hugo</h2>
 <p><a href=https://github.com/gohugoio/hugo>官网安装</a>（Mac，windows，linux如下）</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>mkdir ~/home_opt/src
@@ -244,13 +231,13 @@ go install
 </code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#错误：</span>
 go: github.com/bep/debounce@v1.2.0: Get <span style=color:#e6db74>&#34;https://proxy.golang.org/github.com/bep/debounce/@v/v1.2.0.mod&#34;</span>: EOF
 
-</code></pre></div><p><img src=/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123180633-803x36.png alt=截屏-20211123180633-803x36></p>
+</code></pre></div><p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242116423.png alt=截屏-20211123180633-803x36></p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#国内ping不通proxy.golang.org</span>
 <span style=color:#75715e>#输入以下即可：</span>
 go env -w GOPROXY<span style=color:#f92672>=</span>https://goproxy.cn
-</code></pre></div><p><img src=/home/mhking/Pictures/%E6%88%AA%E5%B1%8F-20211123180648-473x62.png alt=截屏-20211123180648-473x62></p>
+</code></pre></div><p><img src=https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242116485.png alt=截屏-20211123180648-473x62></p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>hugo version
-</code></pre></div><h3 id=heading></h3>
+</code></pre></div>
 <footer class=footline>
 </footer>
 </div>
@@ -263,16 +250,16 @@ go env -w GOPROXY<span style=color:#f92672>=</span>https://goproxy.cn
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1637757810></script>
-<script src=/js/perfect-scrollbar.min.js?1637757810></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1637757810></script>
-<script src=/js/jquery.sticky.js?1637757810></script>
-<script src=/js/featherlight.min.js?1637757810></script>
-<script src=/js/highlight.pack.js?1637757810></script>
+<script src=/js/clipboard.min.js?1637762419></script>
+<script src=/js/perfect-scrollbar.min.js?1637762419></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1637762419></script>
+<script src=/js/jquery.sticky.js?1637762419></script>
+<script src=/js/featherlight.min.js?1637762419></script>
+<script src=/js/highlight.pack.js?1637762419></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1637757810></script>
-<script src=/js/learn.js?1637757810></script>
-<script src=/js/hugo-learn.js?1637757810></script>
+<script src=/js/modernizr.custom-3.6.0.js?1637762419></script>
+<script src=/js/learn.js?1637762419></script>
+<script src=/js/hugo-learn.js?1637762419></script>
 <script src=https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
