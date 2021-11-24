@@ -1,16 +1,12 @@
-# hugo安装
-
-
+# Hugo安装
 
 ## 一、安装Git
-
-
 
 ```shell
 sudo apt install git
 ```
 
-<font size=5 face="微软雅黑">配置ssh</font>
+### 配置ssh
 
 ```shell
 
@@ -18,97 +14,37 @@ sudo apt install git
 
 
 
-## 二、安装go
+## 二、hugo安装
 
-```shell
-mkdir ~/home_opt		#home下软件安装包位置的home_opt，可设置自己的位置
-cd ~/home_opt
-wget -c https://go.dev/dl/go1.17.3.linux-amd64.tar.gz
-sudo tar -xz go1.17.3.linux-amd64.tar.gz
-mv -f go go_install						#重命名
-sudo mv -f  go_install /usr/local		#移动到安装区
-cd /usr/local
-sudo chmod -R 0777 go_install
-```
+https://github.com/gohugoio/hugo/releases
 
-<font size=5 face="微软雅黑">添加到`$PATH`环境变量</font>
+1. #### 下载最新的扩展版本 ( [hugo_extended_0.89.4_Linux-64bit.tar.gz](https://github.com/gohugoio/hugo/releases/download/v0.89.4/hugo_extended_0.89.4_Linux-64bit.tar.gz))。
 
-<font size=5 face="微软雅黑">`GOROOT`是系统上安装Go软件包的位置</font>
+2. #### 创建一个新目录：
 
-<font size=5 face="微软雅黑">`GOPATH`是工作目录的位置</font>
+   ```shell
+   mkdir hugo
+   ```
 
-```shell
-# src：go在包安装、文件编译时自动寻找区，bin：go执行命令区
-mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作区
-sudo chmod -R 0777 go_work
-```
+3. #### 将您下载的文件解压缩到`hugo`.
 
-<font size=5 face="微软雅黑">修改环境变量，我的shell改为zsh了。</font>
+4. #### 切换到新目录：
 
-```shell
-sudo gedit ~/.zshrc
-```
+   ```shell
+   cd hugo
+   ```
 
-```shell
-#内容：
-export GOROOT=/usr/local/go_install
-export GOPATH=~/home_opt/go_work
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-```
+5. #### 安装雨果：
 
-```shell
-source ~/.zshrc		#环境变量生效
-export				#输出
-```
+   ```shell
+   sudo install hugo /usr/bin
+   ```
 
-<font size=5 face="微软雅黑">默认shell的修改使用下面的：</font>
+6. #### 版本
 
-```shell
-echo $shell			#查看默认shell
-sudo gedit ~/.bashrc
-source ~/.bashrc	#环境变量生效
-export				#输出
-```
-
-<font size=5 face="微软雅黑">效果：关闭shell，重启终端输入（任意shell能输出版本）</font>
-
-```shell
-go version
-```
-
-![截屏-20211123173529-319x63](/home/mhking/Pictures/截屏-20211123173529-319x63.png)
-
-## 二、编译hugo
-
-<font size=5 face="微软雅黑">[官网安装](https://github.com/gohugoio/hugo)（Mac，windows，linux如下）</font>
-
-```shell
-mkdir ~/home_opt/src
-cd ~/home_opt/src
-git clone https://github.com/gohugoio/hugo.git
-cd hugo
-go install
-```
-
-```shell
-#错误：
-go: github.com/bep/debounce@v1.2.0: Get "https://proxy.golang.org/github.com/bep/debounce/@v/v1.2.0.mod": EOF
-
-```
-
-![截屏-20211123180633-803x36](/home/mhking/Pictures/截屏-20211123180633-803x36.png)
-
-```shell
-#国内ping不通proxy.golang.org
-#输入以下即可：
-go env -w GOPROXY=https://goproxy.cn
-```
-
-![截屏-20211123180648-473x62](/home/mhking/Pictures/截屏-20211123180648-473x62.png)
-
-```shell
-hugo version
-```
+   ```shell
+   hugo version
+   ```
 
 ## 三、配置本地站点
 
@@ -139,6 +75,10 @@ https://themes.gohugo.io/
 ```shell
 #克隆主题到themes，主题对应一个作者的github仓库，submodule add将他人仓库链接到自己的仓库，主题更新时我们网页同步更新
 git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme themes/hugo-tranquilpeak-theme
+
+git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme 
+
+git submodule add https://github.com/mhking-liao/starter-hugo-academic.git themes/starter-hugo-academic
 #自己看主题配置，每个主题都不同，都需要修改一些配置。有些还要装插件
 ```
 
@@ -179,7 +119,7 @@ hugo server
 
 ![截屏-20211123185932-814x478](/home/mhking/Pictures/截屏-20211123185932-814x478.png)
 
-<font size=5 face="微软雅黑">浏览器输入：http://localhost:1313/</font>
+### 浏览器输入：http://localhost:1313/
 
 ## 四、上传Hugo至Github
 
@@ -193,7 +133,7 @@ git remote add origin https://github.com/mhking-liao/mhking-liao.github.io.git
 git push -u origin main	#改动文件上传至github
 ```
 
-<font size=5 face="微软雅黑">建立工作流，这是静态网页生成脚本，hugo官网有介绍，[Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)</font>
+### 建立工作流，这是静态网页生成脚本，hugo官网有介绍，[Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
 ```shell
 mkdir .github
@@ -263,20 +203,22 @@ git push
 
 git status
 git add .
-git commit -m "hugo install to github"
+git commit -m "Article update 2021.11.24_11:45"
 git push
 
 ```
 
-<font size=5 face="微软雅黑">githut分支源默认改为gh-pages</font>
+### githut分支源默认改为gh-pages
+
+------
 
 ## 总结：
 
-<font size=5 face="微软雅黑">虽说国内外教程挺多，但是一堆坑还不一定能弄完，有搞一半就没了，多多少少有缺斤少两的。（windows坑最多，hexo兼容最差，那个npm一言难尽，一堆过期包，修都要半天，主题都没法装）</font>
+### 虽说国内外教程挺多，但是一堆坑还不一定能弄完，有搞一半就没了，多多少少有缺斤少两的。（windows坑最多，hexo兼容最差，那个npm一言难尽，一堆过期包，修都要半天，主题都没法装）
 
-<font size=5 face="微软雅黑">最后两步骤，上传Hugo源码和静态文件的就没几个讲清楚的，整完主题不能显示的一堆.....themes没链接好，还是太小白，大神不大想讲</font>
+### 最后两步骤，上传Hugo源码和静态文件的就没几个讲清楚的，整完主题不能显示的一堆.....themes没链接好，还是太小白，大神不大想讲
 
-<font size=5 face="微软雅黑">学好github的分布式开发吧。用官网的安装方式就行，个人向的水平参差不齐。</font>
+### 学好github的分布式开发吧。用官网的安装方式就行，个人向的水平参差不齐。
 
 ------
 
