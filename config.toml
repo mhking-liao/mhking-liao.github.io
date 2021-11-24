@@ -15,7 +15,7 @@
 baseURL = "https://mhking-liao.github.io/"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
-title = "Hugo tranquilpeak theme"
+title = "MHKING BLOG"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
@@ -97,7 +97,7 @@ canonifyurls = true
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>"
-  url = "https://github.com/BIGBIRDKING"
+  url = "https://github.com/mhking-liao"
 [[menu.links]]
   weight = 2
   identifier = "stackoverflow"
