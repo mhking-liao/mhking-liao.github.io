@@ -4,19 +4,17 @@
 
 ## 一、安装Git
 
+
+
 ```shell
 sudo apt install git
 ```
 
-配置ssh
+<font size=5 face="微软雅黑">配置ssh</font>
 
 ```shell
 
 ```
-
-
-
-
 
 
 
@@ -33,11 +31,11 @@ cd /usr/local
 sudo chmod -R 0777 go_install
 ```
 
-添加到`$PATH`环境变量
+<font size=5 face="微软雅黑">添加到`$PATH`环境变量</font>
 
-`GOROOT`是系统上安装Go软件包的位置
+<font size=5 face="微软雅黑">`GOROOT`是系统上安装Go软件包的位置</font>
 
-`GOPATH`是工作目录的位置
+<font size=5 face="微软雅黑">`GOPATH`是工作目录的位置</font>
 
 ```shell
 # src：go在包安装、文件编译时自动寻找区，bin：go执行命令区
@@ -45,7 +43,7 @@ mkdir ~/home_opt/go_work ~/home_opt/go_work/src ~/home_opt/go_work/bin	#go工作
 sudo chmod -R 0777 go_work
 ```
 
-修改环境变量，我的shell改为zsh了。
+<font size=5 face="微软雅黑">修改环境变量，我的shell改为zsh了。</font>
 
 ```shell
 sudo gedit ~/.zshrc
@@ -63,7 +61,7 @@ source ~/.zshrc		#环境变量生效
 export				#输出
 ```
 
-默认shell的修改使用下面的：
+<font size=5 face="微软雅黑">默认shell的修改使用下面的：</font>
 
 ```shell
 echo $shell			#查看默认shell
@@ -72,7 +70,7 @@ source ~/.bashrc	#环境变量生效
 export				#输出
 ```
 
-效果：关闭shell，重启终端输入（任意shell能输出版本）
+<font size=5 face="微软雅黑">效果：关闭shell，重启终端输入（任意shell能输出版本）</font>
 
 ```shell
 go version
@@ -82,7 +80,7 @@ go version
 
 ## 二、编译hugo
 
-[官网安装](https://github.com/gohugoio/hugo)（Mac，windows，linux如下）
+<font size=5 face="微软雅黑">[官网安装](https://github.com/gohugoio/hugo)（Mac，windows，linux如下）</font>
 
 ```shell
 mkdir ~/home_opt/src
@@ -181,7 +179,7 @@ hugo server
 
 ![截屏-20211123185932-814x478](/home/mhking/Pictures/截屏-20211123185932-814x478.png)
 
-浏览器输入：http://localhost:1313/
+<font size=5 face="微软雅黑">浏览器输入：http://localhost:1313/</font>
 
 ## 四、上传Hugo至Github
 
@@ -195,7 +193,7 @@ git remote add origin https://github.com/mhking-liao/mhking-liao.github.io.git
 git push -u origin main	#改动文件上传至github
 ```
 
-建立工作流，这是静态网页生成脚本，hugo官网有介绍，[Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+<font size=5 face="微软雅黑">建立工作流，这是静态网页生成脚本，hugo官网有介绍，[Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)</font>
 
 ```shell
 mkdir .github
@@ -270,17 +268,15 @@ git push
 
 ```
 
-githut分支源默认改为gh-pages
+<font size=5 face="微软雅黑">githut分支源默认改为gh-pages</font>
 
-------
+## 总结：
 
-#### 总结：
+<font size=5 face="微软雅黑">虽说国内外教程挺多，但是一堆坑还不一定能弄完，有搞一半就没了，多多少少有缺斤少两的。（windows坑最多，hexo兼容最差，那个npm一言难尽，一堆过期包，修都要半天，主题都没法装）</font>
 
-虽说国内外教程挺多，但是一堆坑还不一定能弄完，有搞一半就没了，多多少少有缺斤少两的。（windows坑最多，hexo兼容最差，那个npm一言难尽，一堆过期包，修都要半天，主题都没法装）
+<font size=5 face="微软雅黑">最后两步骤，上传Hugo源码和静态文件的就没几个讲清楚的，整完主题不能显示的一堆.....themes没链接好，还是太小白，大神不大想讲</font>
 
-最后两步骤，上传Hugo源码和静态文件的就没几个讲清楚的，整完主题不能显示的一堆.....themes没链接好，还是太小白，大神不大想讲
-
-学好github的分布式开发吧。用官网的安装方式就行，个人向的水平参差不齐。
+<font size=5 face="微软雅黑">学好github的分布式开发吧。用官网的安装方式就行，个人向的水平参差不齐。</font>
 
 ------
 
