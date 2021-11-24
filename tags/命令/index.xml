@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>命令 on MHKING BLOG</title><link>https://mhking-liao.github.io/tags/%E5%91%BD%E4%BB%A4/</link><description>Recent content in 命令 on MHKING BLOG</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 24 Nov 2021 11:57:03 +0800</lastBuildDate><atom:link href="https://mhking-liao.github.io/tags/%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml"/><item><title>github</title><link>https://mhking-liao.github.io/post/github%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E8%87%B3%E6%9C%AC%E5%9C%B0%E8%A6%86%E7%9B%96/</link><pubDate>Wed, 24 Nov 2021 11:57:03 +0800</pubDate><guid>https://mhking-liao.github.io/post/github%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E8%87%B3%E6%9C%AC%E5%9C%B0%E8%A6%86%E7%9B%96/</guid><description>一、github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &amp;ndash;all
+(2) 让本地代码与origin/main完全相同 git reset &amp;ndash;hard origin/main
+(3) git pull origin main
+二、github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
+git init 2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
+git add . 3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明
+git commit -m 'first commit' 4、关联到远程库
+git remote add origin 你的远程库地址 如：
+git remote add origin https://github.com/cade8800/ionic-demo.git 5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
+git pull --rebase origin master 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
+git push -u origin master *、状态查询命令
+git status 三、Git上传、覆盖、删除 然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。</description></item></channel></rss>

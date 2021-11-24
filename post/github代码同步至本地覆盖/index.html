@@ -1,16 +1,16 @@
 <!doctype html><html lang=zh-cn>
 <head>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"Website","@id":"https:\/\/mhking-liao.github.io\/","author":{"@type":"Person","name":"MHKING","image":"https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460"},"name":"MHKING BLOG","description":"github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch \u0026ndash;all\n(2) 让本地代码与origin\/main完全相同 git reset \u0026ndash;hard origin\/main\n(3) git pull origin main\ngithub本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库\ngit init 2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件\ngit add . 3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明\ngit commit -m \u0027first commit\u0027 4、关联到远程库\ngit remote add origin 你的远程库地址 如：\ngit remote add origin https:\/\/github.com\/cade8800\/ionic-demo.git 5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）\ngit pull --rebase origin master 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。\ngit push -u origin master *、状态查询命令\ngit status ","url":"https:\/\/mhking-liao.github.io\/post\/github%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E8%87%B3%E6%9C%AC%E5%9C%B0%E8%A6%86%E7%9B%96\/","keywords":"[]"}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"Website","@id":"https:\/\/mhking-liao.github.io\/","author":{"@type":"Person","name":"MHKING","image":"https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460"},"name":"MHKING BLOG","description":"一、github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch \u0026ndash;all\n(2) 让本地代码与origin\/main完全相同 git reset \u0026ndash;hard origin\/main\n(3) git pull origin main\n二、github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库\ngit init 2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件\ngit add . 3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明\ngit commit -m \u0027first commit\u0027 4、关联到远程库\ngit remote add origin 你的远程库地址 如：\ngit remote add origin https:\/\/github.com\/cade8800\/ionic-demo.git 5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）\ngit pull --rebase origin master 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。\ngit push -u origin master *、状态查询命令\ngit status 三、Git上传、覆盖、删除 然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。","url":"https:\/\/mhking-liao.github.io\/post\/github%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E8%87%B3%E6%9C%AC%E5%9C%B0%E8%A6%86%E7%9B%96\/","keywords":"[tech]"}</script>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Hugo 0.89.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name=author content="MHKING">
-<meta name=keywords content>
-<meta name=description content="github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &ndash;all
+<meta name=keywords content="tech">
+<meta name=description content="一、github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &ndash;all
 (2) 让本地代码与origin/main完全相同 git reset &ndash;hard origin/main
 (3) git pull origin main
-github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
+二、github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
 git init 2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
 git add . 3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明
 git commit -m 'first commit' 4、关联到远程库
@@ -18,11 +18,11 @@ git remote add origin 你的远程库地址 如：
 git remote add origin https://github.com/cade8800/ionic-demo.git 5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
 git pull --rebase origin master 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
 git push -u origin master *、状态查询命令
-git status ">
-<meta property="og:description" content="github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &ndash;all
+git status 三、Git上传、覆盖、删除 然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。">
+<meta property="og:description" content="一、github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &ndash;all
 (2) 让本地代码与origin/main完全相同 git reset &ndash;hard origin/main
 (3) git pull origin main
-github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
+二、github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
 git init 2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
 git add . 3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明
 git commit -m 'first commit' 4、关联到远程库
@@ -30,17 +30,17 @@ git remote add origin 你的远程库地址 如：
 git remote add origin https://github.com/cade8800/ionic-demo.git 5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
 git pull --rebase origin master 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
 git push -u origin master *、状态查询命令
-git status ">
+git status 三、Git上传、覆盖、删除 然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MHKING BLOG">
-<meta name=twitter:title content="MHKING BLOG">
+<meta property="og:title" content="github">
+<meta name=twitter:title content="github">
 <meta property="og:url" content="https://mhking-liao.github.io/post/github%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E8%87%B3%E6%9C%AC%E5%9C%B0%E8%A6%86%E7%9B%96/">
 <meta property="twitter:url" content="https://mhking-liao.github.io/post/github%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E8%87%B3%E6%9C%AC%E5%9C%B0%E8%A6%86%E7%9B%96/">
 <meta property="og:site_name" content="MHKING BLOG">
-<meta property="og:description" content="github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &ndash;all
+<meta property="og:description" content="一、github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &ndash;all
 (2) 让本地代码与origin/main完全相同 git reset &ndash;hard origin/main
 (3) git pull origin main
-github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
+二、github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
 git init 2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
 git add . 3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明
 git commit -m 'first commit' 4、关联到远程库
@@ -48,11 +48,11 @@ git remote add origin 你的远程库地址 如：
 git remote add origin https://github.com/cade8800/ionic-demo.git 5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
 git pull --rebase origin master 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
 git push -u origin master *、状态查询命令
-git status ">
-<meta name=twitter:description content="github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &ndash;all
+git status 三、Git上传、覆盖、删除 然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。">
+<meta name=twitter:description content="一、github代码同步至本地（覆盖） (1) 更新远程仓库的代码为最新的 git fetch &ndash;all
 (2) 让本地代码与origin/main完全相同 git reset &ndash;hard origin/main
 (3) git pull origin main
-github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
+二、github本地同步至仓库 1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
 git init 2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
 git add . 3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明
 git commit -m 'first commit' 4、关联到远程库
@@ -60,12 +60,17 @@ git remote add origin 你的远程库地址 如：
 git remote add origin https://github.com/cade8800/ionic-demo.git 5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
 git pull --rebase origin master 6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
 git push -u origin master *、状态查询命令
-git status ">
+git status 三、Git上传、覆盖、删除 然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。">
 <meta property="og:locale" content="zh-cn">
+<meta property="article:published_time" content="2021-11-24T11:57:03">
+<meta property="article:modified_time" content="2021-11-24T11:57:03">
+<meta property="article:section" content="广西贵港">
+<meta property="article:section" content="家中">
+<meta property="article:tag" content="命令">
 <meta name=twitter:card content="summary">
 <meta property="og:image" content="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=640">
 <meta property="twitter:image" content="https://www.gravatar.com/avatar/2aa9e31640162437631f21ea4190a460?s=640">
-<title>MHKING BLOG</title>
+<title>github</title>
 <link rel=icon href=https://mhking-liao.github.io/favicon.png>
 <link rel=canonical href=https://mhking-liao.github.io/post/github%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E8%87%B3%E6%9C%AC%E5%9C%B0%E8%A6%86%E7%9B%96/>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer>
@@ -152,22 +157,26 @@ git status ">
 <article class=post id=top>
 <div class="post-header main-content-wrap text-left">
 <h1 class=post-title>
+github
 </h1>
 <div class="postShorten-meta post-meta">
-<time datetime=0001-01-01T00:00:00Z>
-一月 1, 1
+<time datetime=2021-11-24T11:57:03+08:00>
+十一月 24, 2021
 </time>
+<span>发布在</span>
+<a class=category-link href=https://mhking-liao.github.io/categories/%e5%b9%bf%e8%a5%bf%e8%b4%b5%e6%b8%af>广西贵港</a>,
+<a class=category-link href=https://mhking-liao.github.io/categories/%e5%ae%b6%e4%b8%ad>家中</a>
 </div>
 </div>
 <div class="post-content markdown">
 <div class=main-content-wrap>
-<h1 id=github代码同步至本地覆盖>github代码同步至本地（覆盖）</h1>
+<h1 id=一github代码同步至本地覆盖>一、github代码同步至本地（覆盖）</h1>
 <p>(1) 更新远程仓库的代码为最新的
 git fetch &ndash;all</p>
 <p>(2) 让本地代码与origin/main完全相同
 git reset &ndash;hard origin/main</p>
 <p>(3) git pull origin main</p>
-<h1 id=github本地同步至仓库>github本地同步至仓库</h1>
+<h1 id=二github本地同步至仓库>二、github本地同步至仓库</h1>
 <p>1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库</p>
 <pre tabindex=0><code>git init
 </code></pre><p>2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件</p>
@@ -184,21 +193,59 @@ git reset &ndash;hard origin/main</p>
 <pre tabindex=0><code>git push -u origin master
 </code></pre><p>*、状态查询命令</p>
 <pre tabindex=0><code>git status
-</code></pre>
+</code></pre><h1 id=三git上传覆盖删除>三、Git上传、覆盖、删除</h1>
+<p>然后通过以下指令初始化，把这个项目所在目录变成Git可以管理的仓库。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>git init
+</code></pre></div><p>成功后，复制仓库的ssh地址，并输入以下指令：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp> git remote <span style=color:#66d9ef>add</span> origin <span style=color:#960050;background-color:#1e0010>仓库</span>ssh地址
+</code></pre></div><p>也可以用以下指令删除关联：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git remote rm origin
+</code></pre></div><p>也可以通过以下指令更换仓库：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>git remote set<span style=color:#f92672>-</span>url origin 仓库ssh地址
+</code></pre></div><p>更换后，可以用<a href=https://blog.csdn.net/m0_46419510/article/details/110499832#%E6%9F%A5%E8%AF%A2>查询</a>查看是否更换成功。</p>
+<h2 id=添加上传>添加上传</h2>
+<p>将全部内容添加，先输入以下指令：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>git <span style=color:#66d9ef>add</span> .
+</code></pre></div><p>如果是指定目录，就改为以下指令：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>git <span style=color:#66d9ef>add</span> <span style=color:#960050;background-color:#1e0010>目录</span>
+</code></pre></div><p>如果是指定文件，就改为以下指令：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>git <span style=color:#66d9ef>add</span> <span style=color:#960050;background-color:#1e0010>文件</span>.<span style=color:#960050;background-color:#1e0010>后缀</span>
+</code></pre></div><p>之后，再输入以下指令：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql> git <span style=color:#66d9ef>commit</span> <span style=color:#f92672>-</span>m <span style=color:#e6db74>&#34;把文件提交，这里是注释&#34;</span>
+</code></pre></div><p>到这里，你的添加并没有上传到仓库，只是添加到了暂存区，上传到仓库还需要输入以下指令：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-perl data-lang=perl> git push <span style=color:#f92672>-</span>u origin main
+</code></pre></div><p>最后，还会有个提示，输入 yes 即可。</p>
+<h2 id=删除>删除</h2>
+<p>通过以下指令删除指定文件：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>git</span> <span style=color:#f92672>em</span> <span style=color:#f92672>文件</span>.<span style=color:#a6e22e>后缀</span>
+</code></pre></div><p>通过以下指令可以删除指定文件夹：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>git</span> <span style=color:#f92672>em</span> <span style=color:#f92672>-r</span> <span style=color:#f92672>文件夹</span>
+</code></pre></div><p>最后，必要通过以下指令提交修改：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql>git <span style=color:#66d9ef>commit</span> <span style=color:#f92672>-</span>m <span style=color:#e6db74>&#34;注释&#34;</span>
+</code></pre></div><h2 id=查询>查询</h2>
+<p>查看本地分支：</p>
+<pre tabindex=0><code class=language-undefined data-lang=undefined>git branch
+</code></pre><p>查看关联仓库地址：</p>
+<pre tabindex=0><code class=language-undefined data-lang=undefined>git remote -v
+</code></pre><p>待补充。</p>
 </div>
 </div>
 <div id=post-footer class="post-footer main-content-wrap">
+<div class=post-footer-tags>
+<span class="text-color-light text-small">标签</span><br>
+<a class="tag tag--primary tag--small" href=https://mhking-liao.github.io/tags/%E5%91%BD%E4%BB%A4/>命令</a>
+</div>
 <div class=post-actions-wrap>
 <nav>
 <ul class="post-actions post-action-nav">
 <li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/test_post/ data-tooltip=测试 aria-label="下一篇: 测试">
+<a class="post-action-btn btn btn--disabled">
 <i class="fa fa-angle-left"></i>
 <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
 </a>
 </li>
 <li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/git%E4%B8%8A%E4%BC%A0%E8%A6%86%E7%9B%96%E5%88%A0%E9%99%A4/ data-tooltip aria-label="上一篇: ">
+<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/ data-tooltip=go语言 aria-label="上一篇: go语言">
 <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
 <i class="fa fa-angle-right"></i>
 </a>
@@ -255,13 +302,13 @@ git reset &ndash;hard origin/main</p>
 <nav>
 <ul class="post-actions post-action-nav">
 <li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/test_post/ data-tooltip=测试 aria-label="下一篇: 测试">
+<a class="post-action-btn btn btn--disabled">
 <i class="fa fa-angle-left"></i>
 <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
 </a>
 </li>
 <li class=post-action>
-<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/git%E4%B8%8A%E4%BC%A0%E8%A6%86%E7%9B%96%E5%88%A0%E9%99%A4/ data-tooltip aria-label="上一篇: ">
+<a class="post-action-btn btn btn--default tooltip--top" href=https://mhking-liao.github.io/post/go%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85hugo/ data-tooltip=go语言 aria-label="上一篇: go语言">
 <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
 <i class="fa fa-angle-right"></i>
 </a>
