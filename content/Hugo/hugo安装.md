@@ -73,7 +73,7 @@ hugo new site hugo_blog
 cd hugo_blog
 ```
 
-![截屏-20211123181431-632x59](/home/mhking/Pictures/截屏-20211123181431-632x59.png)
+![截屏-20211123215327-691x86](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242031451.png)
 
 ```shell
 cd ~/home_opt/blog/hugo_blog
@@ -237,11 +237,13 @@ git push
 
 ------
 
-[Hugo And Deploy To Github]: https://www.youtube.com/watch?v=psyz4UPnGAA&amp;ab_channel=CodeNanshu	"这是讲的最好的"
+Hugo And Deploy To Github：https://www.youtube.com/watch?v=psyz4UPnGAA&amp;ab_channel=CodeNanshu 这是讲的最好的
 
 ------
 
-[Creating a Blog with Hugo and Github in 10 minutes]: https://www.youtube.com/watch?v=LIFvgrRxdt4&amp;ab_channel=RyanSchachte
-[使用Hugo和GitHub搭建博客]: https://zhuanlan.zhihu.com/p/150095964
-[GitHub+Hexo 搭建个人网站详细教程]: https://zhuanlan.zhihu.com/p/26625249
+Creating a Blog with Hugo and Github in 10 minutes：https://www.youtube.com/watch?v=LIFvgrRxdt4&amp;ab_channel=RyanSchachte 
+
+使用Hugo和GitHub搭建博客： https://zhuanlan.zhihu.com/p/150095964 
+
+GitHub+Hexo 搭建个人网站详细教程：https://zhuanlan.zhihu.com/p/26625249
 
