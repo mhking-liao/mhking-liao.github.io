@@ -73,7 +73,7 @@ export				#输出
 go version
 ```
 
-![截屏-20211123173529-319x63](/home/mhking/Pictures/截屏-20211123173529-319x63.png)
+![截屏-20211123173529-319x63](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242116100.png)
 
 ## 二、编译hugo
 
@@ -93,7 +93,7 @@ go: github.com/bep/debounce@v1.2.0: Get "https://proxy.golang.org/github.com/bep
 
 ```
 
-![截屏-20211123180633-803x36](/home/mhking/Pictures/截屏-20211123180633-803x36.png)
+![截屏-20211123180633-803x36](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242116423.png)
 
 ```shell
 #国内ping不通proxy.golang.org
@@ -101,10 +101,8 @@ go: github.com/bep/debounce@v1.2.0: Get "https://proxy.golang.org/github.com/bep
 go env -w GOPROXY=https://goproxy.cn
 ```
 
-![截屏-20211123180648-473x62](/home/mhking/Pictures/截屏-20211123180648-473x62.png)
+![截屏-20211123180648-473x62](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242116485.png)
 
 ```shell
 hugo version
 ```
-
-### 

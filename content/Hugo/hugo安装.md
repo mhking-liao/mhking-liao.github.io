@@ -73,7 +73,7 @@ hugo new site hugo_blog
 cd hugo_blog
 ```
 
-![截屏-20211123215327-691x86](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242031451.png)
+![截屏-20211123215327-691x86](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056572.png)
 
 ```shell
 cd ~/home_opt/blog/hugo_blog
@@ -88,18 +88,18 @@ git commit -m "first commit"	#文件变动提交至暂存区
 https://themes.gohugo.io/
 
 ```shell
-#克隆主题到themes，主题对应一个作者的github仓库，submodule add将他人仓库链接到自己的仓库，主题更新时我们网页同步更新
+#推荐git submodule add theme-* themes/theme-*
+#git clone（好多主题都不推荐的，写的是有些内容可能显示异常）
+#一个主题对应一个作者的github仓库，submodule add将他人仓库链接到自己的仓库，主题更新时我们的网页主题同步更新
+
 git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme themes/hugo-tranquilpeak-theme
 
-git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/hugo-tranquilpeak-theme 
-
-git submodule add https://github.com/mhking-liao/starter-hugo-academic.git themes/starter-hugo-academic
 #自己看主题配置，每个主题都不同，都需要修改一些配置。有些还要装插件
 ```
 
-![截屏-20211123182529-2539x1050](/home/mhking/Pictures/截屏-20211123182529-2539x1050.png)
+![截屏-20211123182529-2539x1050](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056801.png)
 
-![截屏-20211123182627-2254x1055](/home/mhking/Pictures/截屏-20211123182627-2254x1055.png)
+![截屏-20211123182627-2254x1055](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056216.png)
 
 ```shell
 cd ~/home_opt/blog/hugo_blog
@@ -132,7 +132,7 @@ draft: true
 hugo server
 ```
 
-![截屏-20211123185932-814x478](/home/mhking/Pictures/截屏-20211123185932-814x478.png)
+![截屏-20211123185932-814x478](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056793.png)
 
 ### 浏览器输入：http://localhost:1313/
 
@@ -208,14 +208,14 @@ baseURL = "github地址"
 disqusShortname = "hugo-tranquilpeak-theme"
 ```
 
-![截屏-20211123233301-1715x1034](/home/mhking/Pictures/截屏-20211123233301-1715x1034.png)
+![截屏-20211123233301-1715x1034](https://photoline-1259169166.cos.ap-guangzhou.myqcloud.com/202111242056365.png)
 
 ```shell
 git status
 git add .
 git commit -m "update toml"
 git push
-
+#自用样本，可自写sh脚本
 git status
 git add .
 git commit -m "Article update 2021.11.24_11:45"
